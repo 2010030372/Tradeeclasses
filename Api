@@ -1,17 +1,19 @@
+import pandas as pd
 import json
 import flask
-
+import pickle
 import joblib 
-from flask import Flask,request
+from flask import Flask,request,jsonify,render_template
 import numpy as np 
 
 app = Flask(__name__) 
 model = joblib.load(r'C:\Users\Lahari\Trade\svm')
-@app.route('/predict',methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
-    event = json.loads(request.data) 
-    print(event)
-    return "1"
+    json_ = request.json 
+    query_df = pd.DataFrame(json_)
+    prediction = model.predict(query_df)
+    return jsonify({"Prediction":list(prediction)})
     
 if __name__ == '__main__':
     app.run(debug = True)
