@@ -13,8 +13,11 @@ lemmatization
 
 #MODELS USED 
 1.NAIVE BAYES - ACCURACY(70) 
+
 2.LOGISTIC REGRESSION -  ACCURACY(80) 
+
 3.SUPPORT VECTOR MACHINE -  ACCURACY(81) 
+
 4.RANDOM FOREST -  ACCURACY(79) 
 
 # So as SVM accuracy is good.WE will be using SVM model in this project
