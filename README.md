@@ -24,3 +24,11 @@ lemmatization
 4.RANDOM FOREST -  ACCURACY(79) 
 
 # So as SVM accuracy is good.WE will be using SVM model in this project
+#APPLICATIONS USWD:
+
+POSTMAN 
+
+SPYDER 
+
+JUPYTER
+
